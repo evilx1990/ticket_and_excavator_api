@@ -9,7 +9,38 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*/
+@import url('https://fonts.googleapis.com/css?family=Domine');
+@import "bootstrap";
+@import "tickets";
+
+body {
+  font-family: 'Domine', serif;
+  background: image-url('bg.png') repeat;
+}
+
+header {
+  width: 100%;
+  height: 58px;
+  background-color: darkred;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav h3 {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: calc(100vh - 116px);
+}
+
+footer {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
