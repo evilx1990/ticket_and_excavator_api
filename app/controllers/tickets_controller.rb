@@ -11,7 +11,6 @@ class TicketsController < ApplicationController # :nodoc:
 
   def create
     request.format = :json
-
     @ticket = Ticket.new(ticket_params)
 
     if @ticket.save && @ticket.create_excavator(excavator_params)
@@ -35,10 +34,10 @@ class TicketsController < ApplicationController # :nodoc:
   def excavator_params
     params.permit.tap do |whitelisted|
       whitelisted[:address] = {
-          address: params[:excavator][:address],
-          city: params[:excavator][:city],
-          state: params[:excavator][:state],
-          zip: params[:excavator][:zip]
+        address: params[:excavator][:address],
+        city: params[:excavator][:city],
+        state: params[:excavator][:state],
+        zip: params[:excavator][:zip]
       }
       whitelisted[:company_name] = params[:excavator][:company_name]
       whitelisted[:crew_onsite] = params[:excavator][:crew_onsite]
