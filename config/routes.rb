@@ -3,5 +3,11 @@
 Rails.application.routes.draw do
   root 'tickets#index'
 
-  resources :tickets, only: %i[index show create]
+  namespace :api do
+    namespace :v1 do
+      resource :ticket, only: :create
+    end
+  end
+
+  resources :tickets, only: %i[index show]
 end
