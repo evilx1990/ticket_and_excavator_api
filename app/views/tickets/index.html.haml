@@ -1,11 +1,10 @@
 .row
-  #tickets.mt-5.col-6.offset-3
+  .col-4.offset-4
     -if @tickets.count.zero?
       empty
     -else
       -@tickets.each do |ticket|
-        =link_to(ticket_path(ticket)) do
-          .ticket.border-bottom
-            =ticket.request_number
-            .ticket-icon
-              =image_tag(asset_path('ticket.png', alt: 'ticket icon'))
+        =link_to(ticket_path(ticket), class: 'ticket') do
+          =ticket.request_number
+          .ticket-icon
+            =image_tag(asset_path('ticket.png', alt: 'ticket icon'))

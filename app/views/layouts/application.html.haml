@@ -8,11 +8,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header
-      %h3
-        TicketsExcavators
-    %main
-      .container.text-center
+    .container
+      %header
+        %h3
+          =link_to('tickets excavators', root_path)
+      %main
         =yield
-    %footer.text-center
-      Rails 5.2.2
+      %footer.text-center
+        Rails 5.2.2

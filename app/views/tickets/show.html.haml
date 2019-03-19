@@ -1,0 +1,10 @@
+.row
+  #ticket.col-5.offset-1
+    %h3.mb-0.border-bottom.border-secondary
+      Ticket
+    =render 'ticket', ticket: @ticket.as_json
+  #excavator.col-5
+    %h3.mb-0.border-bottom.border-secondary
+      Excavator
+    =render 'excavator', excavator: @ticket.excavator
+#google-maps

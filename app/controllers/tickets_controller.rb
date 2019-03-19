@@ -6,6 +6,6 @@ class TicketsController < ApplicationController # :nodoc:
   end
 
   def show
-    @ticket = Ticket.find_by(request_number: params[:id])
+    @ticket = Ticket.find(params[:id])
   end
 end

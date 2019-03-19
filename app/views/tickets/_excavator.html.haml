@@ -1,0 +1,16 @@
+.row
+  .col-4
+    company name:&nbsp
+  .col-8
+    =excavator.company_name
+  .col-4
+    address:&nbsp
+  .col-8
+    =excavator.address['address']
+  -excavator.address.values.each do |value|
+    .col-8.offset-4
+      =value
+  .col-4
+    crew on site:&nbsp
+  .col-8
+    =excavator.crew_onsite
