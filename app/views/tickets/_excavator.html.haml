@@ -7,7 +7,7 @@
     address:&nbsp
   .col-8
     =excavator.address['address']
-  -excavator.address.values.each do |value|
+  -normalize_address(excavator.address).values.each do |value|
     .col-8.offset-4
       =value
   .col-4

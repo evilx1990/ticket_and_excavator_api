@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_115937) do
     t.datetime "response_due_date_time", default: -> { "now()" }
     t.string "primary_service_area_sa_code", default: ""
     t.string "additional_service_area_sa_code", default: [], array: true
-    t.string "well_known_text", default: ""
+    t.string "well_known_text", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["request_number"], name: "index_tickets_on_request_number"

@@ -21,7 +21,7 @@ module Api
           whitelisted[:response_due_date_time] = params[:date_times][:response_due_date_time]
           whitelisted[:primary_service_area_sa_code] = params[:service_area][:primary_service_area_code][:sa_code]
           whitelisted[:additional_service_area_sa_code] = params[:service_area][:additional_service_area_codes][:sa_code]
-          whitelisted[:well_known_text] = params[:excavation_info][:digsite_info][:well_known_text]
+          whitelisted[:well_known_text] = Ticket.coord_to_a(params[:excavation_info][:digsite_info][:well_known_text])
         end
       end
 

@@ -13,7 +13,7 @@ class CreateTickets < ActiveRecord::Migration[5.2] # :nodoc:
       # ServiceArea->AdditionalServiceAreaCodes->SACode
       t.string    :additional_service_area_sa_code, default: [], array: true
       # DigsiteInfo->WellKnownText (can be saved as plain text)
-      t.string    :well_known_text,                 default: ''
+      t.string    :well_known_text,                 default: [], array: true
 
       t.timestamps
     end
